@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Ciclo For</h1>
+  <p id ="for"></p>
+  <button onclick="mostrar()">Mostrar Numeros Pares</button>
+</body>
+<script>
+function mostrar(){
+  var respuesta = "";
+  for(var i = 1; i<101 ; i++){
+    if(i%2 === 0){
+      respuesta += i + "</br>";
+    }
+  }
+  document.getElementById('for').innerHTML = respuesta;
+}
+</script>
+</html>

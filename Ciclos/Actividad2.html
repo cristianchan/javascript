@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Objetos For IN</h1>
+	<p id ="resultado"></p>
+	<button onclick="mostrar()">Mostrar propiedades</button>
+</body>
+<script type="text/javascript">
+function mostrar(){
+	var objeto = {
+		ID:35,
+		nombre:'Cristian Chan',
+		telefono:'50164143'
+	}
+	var resultado = '';
+	for(var obj in objeto){
+		resultado += obj +" : "+objeto[obj] + '</br>';
+	}
+	document.getElementById('resultado').innerHTML = resultado;
+
+}	
+</script>
+</html>
