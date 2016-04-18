@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Do While</h1>
+	<p id ="respuesta"></p>
+</body>
+<script type="text/javascript">
+var paises = ['Milan','Barcelona','Liverpool','Chelsea','Bayer'];
+var tamanioPaises = paises.length;
+var respuesta  = '';
+var i = 0;
+do{
+	respuesta += paises[i] + '</br>';
+	i++;
+} while(i<tamanioPaises)
+document.getElementById('respuesta').innerHTML = respuesta;
+</script>
+</html>
