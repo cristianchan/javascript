@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Finally</h1>
+	<button onclick="miFuncion()">Llamar funcion</button>
+</body>
+<script type="text/javascript">
+function miFuncion(){
+	try{
+		var estudiante = null;
+		alert(estudiante.nombre);
+	}catch(error){
+		alert('Ocurrio un error - ' + error);
+	}finally{
+		alert('Estamos en el finally');
+	}
+}
+</script>
+</html>
