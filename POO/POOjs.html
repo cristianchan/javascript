@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo de producto</title>
+</head>
+<body>
+	<h1>Producto</h1>
+	<button onclick="mostrar()">Mostrar</button>
+	<p id="resultado">resultado de propiedades</p>	
+</body>
+<script type="text/javascript">
+function Producto(codigo,nombre,cantidad,precio){
+	this.codigo = codigo;
+	this.nombre = nombre;
+	this.cantidad = cantidad;
+	this.precio = precio;
+	this.mostrar = function(){
+		return this.codigo + ' ' + this.nombre + ' ' + this.precio + ' ' + this.cantidad; 
+	}
+}
+function mostrar(){
+	var producto = new Producto('001' , 'Cafe' , 5 , 120.50);
+	document.getElementById('resultado').innerHTML = producto.mostrar();
+}
+</script>
+</html>

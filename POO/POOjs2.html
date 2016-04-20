@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo Estudiante</title>
+</head>
+<body>
+	<h1>Ejemplo estudiante</h1>
+	<p id="resultado"></p>
+	<button onclick="mostrarNotas()">Obtener promedio</button>
+</body>
+<script type="text/javascript">
+function Estudiante(nombre , apellido, curso , notas){
+	this.nombre = nombre;
+	this.apellido = apellido;
+	this.curso = curso;
+	this.notas = notas;
+	this.promedio = function(){
+		debugger;
+		var resultado = 0;
+		var contador = 0;
+		for(var nota in notas){
+			contador++;
+			resultado += notas[nota];
+		}
+		document.getElementById('resultado').innerHTML  =  resultado/contador;
+	}
+}
+
+var estudiante = new Estudiante('Sergio','Mayen','JS',{
+	nota1 : 50,
+	nota2 : 100,
+	nota3 : 60
+});
+
+function mostrarNotas(){
+	estudiante.promedio();	
+}
+
+</script>
+</html> 
