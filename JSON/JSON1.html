@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>	
+</head>
+<body>
+</body>
+<script type="text/javascript">
+var estudiantes = [{
+	"codigo":"001",
+	"nombre":"Cristian"
+},
+{
+	"codigo":"002",
+	"nombre":"Jose"
+},
+{
+	"codigo":"003",
+	"nombre":"Manuel"
+
+}] ;
+function leerJson(json){
+	for(var i = 0 , x = json.length;i<x;i++){
+		alert(json[i].codigo + ' - ' + json[i].nombre);
+	}
+}
+leerJson(estudiantes);
+</script>
+</html>

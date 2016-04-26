@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Listado de Personas</title>
+</head>
+<body>
+	<h1>Listado de Personas</h1>
+	<p id="resultado"></p>
+	<button onclick="mostrarNombres();">Mostrar Nombres</button>
+	<button onclick="mostrarMayores();">Mostrar Mayores</button>
+</body>
+<script type="text/javascript">
+var jsonText = '{ "personas":[' +
+'{"nombre":"Jorge" , "edad":20},'+
+'{"nombre":"Cristian" , "edad":11},'+
+'{"nombre":"Julio" , "edad":20},'+
+'{"nombre":"Renato" , "edad":20},'+
+'{"nombre":"Mario" , "edad":12},'+
+'{"nombre":"Cristina" , "edad":50},'+
+'{"nombre":"Ruben" , "edad":20},'+
+'{"nombre":"Dario" , "edad":9},'+
+'{"nombre":"Marta" , "edad":20},'+
+'{"nombre":"Susana" , "edad":1}]}';
+var jsonObj = JSON.parse(jsonText);
+function mostrarNombres(){
+	var respuesta = "";
+	for(var i = 0 , x = jsonObj.personas.length;i<x;i++){
+		respuesta += "Nombre:"+jsonObj.personas[i].nombre + " Edad: " + jsonObj.personas[i].edad +"</br>";
+	}
+	document.getElementById("resultado").innerHTML = respuesta;
+}
+function mostrarMayores(){
+	var respuesta = "";
+	for(var i = 0 , x = jsonObj.personas.length;i<x;i++){
+		if(jsonObj.personas[i].edad > 18)
+			respuesta += "Nombre:"+jsonObj.personas[i].nombre + " Edad: " + jsonObj.personas[i].edad +"</br>";
+	}
+	document.getElementById("resultado").innerHTML = respuesta;	
+}
+</script>
+</html>
