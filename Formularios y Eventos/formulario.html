@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body onload="OnLoad()">
+<h1 align="center">Formulario de vida</h1>
+<form onreset="OnReset()">
+<h2>Informacion Personal</h2>
+Nombres <input type="text" id="nombres"/></br>
+Apellidos <input type="text" id="apellidos"/></br>
+Direccion <input type="text" id="direccion"/></br>
+Edad <input type="text" id="edad"/></br>
+Fecha de Nacimiento <input type="date" id="fechanac"/></br>
+Lugar de Nacimiento <input type="text" id="lugarnac"/></br>
+Estado Civil <input type="text" id="estadocivil"/></br>
+<h2>Informacion Academica</h2>
+Universidad <input type="text" id="universidad"/></br>
+Profecion <input type="text" id="profecion"/></br>
+Observaciones <textarea id="observaciones" onselect="seleccion()"></textarea></br>
+<input type="button" value="Enviar"  onclick="Guardar()" />
+<input type="reset" value="Restablecer"   />
+</form>
+</body>
+<script type="text/javascript">
+	function OnReset(){
+		alert('Se reseteo el fomulario');
+	}
+	function OnLoad(){
+		alert('Bienvenido a su formato de hoja de vida');
+	}
+	function Guardar(){
+		alert('Su hoja de vida se guardo correctamente');
+	}
+	function seleccion() {
+    alert("Usted ha seleccionado el Texto");
+}
+
+
+function letrasmayusculas() {
+    var x = document.getElementById("mayusculas");
+    x.value = x.value.toUpperCase();
+
+     var y = document.getElementById("mayusculas1");
+    y.value = y.value.toUpperCase();
+
+}
+
+</script>
+
+</html>
