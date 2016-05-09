@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Notas de Estudiantes</title>
 	<script type="text/javascript" src="JS/funciones.js"></script>
+	<script type="text/javascript" src="JS/jquery-1.12.3.js"></script>
 </head>
 <body>
 	<h1 align="center">Notas de Estudiantes</h1>
@@ -14,5 +15,12 @@
 		<input type="button" name = "menor" value = "Nota Menor" onclick="mostrarMenor()"></input>
 	<div>
 	<div id = "showTable" align="center" />
+	<div id="msgid">
+	</div>
 </body>
+<script type="text/javascript">
+$(document).ready(function(){
+ $("#msgid").html("This is Hello World by JQuery");
+});
+</script>
 </html>
